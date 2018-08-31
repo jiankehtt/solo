@@ -17,25 +17,29 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<!-- Here we're establishing whether the page was loaded via Ajax or not, for dynamic purposes. If it's ajax, we're not bringing in footer.php -->
-<div id="footer">
-    <center>
-        <div id="wptouch-switch-link">
-            <script type="text/javascript">function switch_delayer() { location.reload();}</script>${mobileLabel} <a id="switch-link" onclick="wptouch_switch_confirmation('normal');" href="javascript:void(0)"></a>		</div>
-    </center>
-    <p><span style="color: gray;">&copy; ${year}</span> - <a href="${servePath}">${blogTitle}</a>${footerContent}</p>
-    <#--<p>Powered by <a href="https://b3log.org" target="_blank">B3log 开源</a> • <a href="https://b3log.org/services/#solo" target="_blank">Solo</a> ${version},-->
-        <#--Theme by <a rel="friend" href="http://dx.b3log.org" target="_blank">dx</a> &lt-->
-        <#--<a rel="friend" href="http://www.bravenewcode.com/products/wptouch-pro">WPtouch</a>.</p>-->
-</div>
+<footer class="footer fn-clear">
+    &copy; ${year}
+    ${footerContent}
+    <a href="${servePath}">${blogTitle}</a>  &nbsp;   • &nbsp;
+    <#--<a href="https://solo.b3log.org" target="_blank">Solo</a> ${version}  <br/>-->
+
+    <#--Powered by <a href="https://b3log.org" target="_blank">B3log</a> 开源 &nbsp;-->
+    <#--<span class="ft-warn">&heartsuit;</span>-->
+    <#--Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">9IPHP</a> by <a href="https://github.com/9IPHP/9IPHP" target="_blank">9IPHP</a> & <a href="http://vanessa.b3log.org" target="_blank">Vanessa</a>-->
+</footer>
+<div class="icon-up" onclick="Util.goTop()"></div>
+
 <script type="text/javascript" src="${staticServePath}/js/lib/jquery/jquery.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="${staticServePath}/js/common${miniPostfix}.js?${staticResourceVersion}" charset="utf-8"></script>
+<script type="text/javascript" src="${staticServePath}/skins/${skinDirName}/js/common${miniPostfix}.js?${staticResourceVersion}" charset="utf-8"></script>
 <script type="text/javascript">
     var latkeConfig = {
         "servePath": "${servePath}",
-        "staticServePath": "${staticServePath}"
+        "staticServePath": "${staticServePath}",
+        "isLoggedIn": "${isLoggedIn?string}",
+        "userName": "${userName}"
     };
-    
+
     var Label = {
         "skinDirName": "${skinDirName}",
         "em00Label": "${em00Label}",
@@ -54,22 +58,7 @@
         "em13Label": "${em13Label}",
         "em14Label": "${em14Label}"
     };
-    
-    $(document).ready(function () {
-        Util.init();
-    
-        var toggleArchive = function (it) {
-            var $it = $(it);
-            $it.next().slideToggle(260, function () {
-                var h4Obj = $it.find("h4");
-                if (this.style.display === "none") {
-                    h4Obj.html("${archiveLabel} +");
-                } else {
-                    h4Obj.html("${archiveLabel} -");
-                }
-            });
-        }
-    });
-    
+
+    Util.parseMarkdown('content-reset');
 </script>
 ${plugins}

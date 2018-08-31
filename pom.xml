@@ -22,53 +22,10 @@
     </description>
     <inceptionYear>2010</inceptionYear>
 
-    <organization>
-        <name>B3log</name>
-        <url>https://b3log.org</url>
-    </organization>
-
-    <licenses>
-        <license>
-            <name>GNU Affero General Public License, Version 3</name>
-            <url>https://www.gnu.org/licenses/agpl-3.0.txt</url>
-        </license>
-    </licenses>
-
-    <developers>
-        <developer>
-            <id>d@b3log.org</id>
-            <name>Liang Ding</name>
-            <email>d@b3log.org</email>
-            <url>http://88250.b3log.org</url>
-            <roles>
-                <role>Lead</role>
-                <role>Initial Committer</role>
-            </roles>
-            <organization>B3log</organization>
-            <organizationUrl>https://b3log.org</organizationUrl>
-            <timezone>+8</timezone>
-        </developer>
-
-        <developer>
-            <id>v@b3log.org</id>
-            <name>Liyuan Li</name>
-            <email>v@b3log.org</email>
-            <url>http://vanessa.b3log.org</url>
-            <roles>
-                <role>Committer</role>
-            </roles>
-            <organization>B3log</organization>
-            <organizationUrl>https://b3log.org</organizationUrl>
-            <timezone>+8</timezone>
-        </developer>
-
-    </developers>
-
     <issueManagement>
         <system>GitHub Issues</system>
         <url>https://github.com/b3log/solo/issues</url>
     </issueManagement>
-
     <scm>
         <url>https://github.com/b3log/solo</url>
     </scm>

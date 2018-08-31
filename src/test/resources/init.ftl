@@ -141,7 +141,7 @@
             <div class="footerWrapper">
                 <div class="footer">
                     &copy; ${year}
-                    Powered by <a href="https://b3log.org" target="_blank">B3log 开源</a> • <a href="https://b3log.org/services/#solo" target="_blank">Solo</a> ${version}
+                    <#--Powered by <a href="https://b3log.org" target="_blank">B3log 开源</a> • <a href="https://b3log.org/services/#solo" target="_blank">Solo</a> ${version}-->
                 </div>
             </div>
         </div>

@@ -390,7 +390,6 @@ public class ArticleProcessorTestCase extends AbstractTestCase {
      *
      * @throws Exception exception
      */
-    @Test(dependsOnMethods = "init")
     public void showAuthorArticles() throws Exception {
         final JSONObject admin = getUserRepository().getAdmin();
         final String userId = admin.optString(Keys.OBJECT_ID);
